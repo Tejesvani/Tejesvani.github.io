@@ -486,7 +486,7 @@ main { overflow-x: hidden; }
 .hero-title {
   text-align: center;
   margin-bottom: 10px;
-  color: var(--color-primary);
+  /*color: var(--color-primary);*/
 }
 
 .hero-tagline {
@@ -498,8 +498,9 @@ main { overflow-x: hidden; }
   font-family: 'Roboto', sans-serif; /* Font choice for consistency */
 }
 
-.hero .btn-primary { margin-inline: auto; }
-
+.hero .btn-primary { 
+  margin-inline: auto; 
+}
 
 
 
@@ -1170,7 +1171,10 @@ textarea.input-field {
     filter: var(--filter-1)
   }
 
-  .hero .btn-primary:is(:hover, :focus) { color: hsl(0, 0%, 12%); }
+  .hero .btn-primary:is(:hover, :focus) {
+    background: var(--color-primary);
+    color: var(--bg-primary);
+  }
 
   .hero-social-list {
     display: block;
