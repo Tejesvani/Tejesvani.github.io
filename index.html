@@ -1,774 +1,641 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Tejesvani - Personal Portfolio</title>
-
-  <!--  favicon -->
-  <link rel="shortcut icon" href="./assets/images/title-avatar.png" type="image/svg+xml">
-
-  <!--  custom css link -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--  google font link  -->
+  <title>Tejesvani — Data Engineer</title>
+  <meta name="description" content="Data Engineer with 3+ years building optimizing pipelines, dimensional models, and analytics infrastructure. Core stack: dbt, Kafka, Spark, Azure, Snowflake.">
+  <link rel="shortcut icon" href="assets/images/title-avatar.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body>
 
-<body id="top" class="dark_theme">
-
-  <!--  #HEADER -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <h1 class="h1 logo">
-        <a href="#">Tejesvani<span>.</span></a>
-      </h1>
-
-      <div class="navbar-actions">
-
-        <!-- <select name="language" id="lang">
-          <option value="en">En</option>
-          <option value="ar">Ar</option>
-        </select> -->
-
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-          <span class="icon"></span>
-        </button>
-
-      </div>
-
-      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link">Home.</a>
-          </li>
-
-          <li>
-            <a href="#about" class="navbar-link">About.</a>
-          </li>
-
-          <li>
-            <a href="#skills" class="navbar-link">Skills.</a>
-          </li>
-
-          <li>
-            <a href="#portfolio" class="navbar-link">Portfolio.</a>
-          </li>
-
-          <li>
-            <a href="#contact" class="navbar-link">Contact.</a>
-          </li>
-
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header-container container">
+      <a href="#home" class="logo">Tejesvani<span class="logo-dot">.</span></a>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-list">
+          <li><a href="#home"       class="nav-link">Home</a></li>
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills"     class="nav-link">Skills</a></li>
+          <li><a href="#projects"   class="nav-link">Projects</a></li>
+          <li><a href="#education"  class="nav-link">Education</a></li>
+          <li><a href="#contact"    class="nav-link">Contact</a></li>
         </ul>
       </nav>
-
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <ion-icon name="moon-outline"  class="moon-icon"></ion-icon>
+          <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <ion-icon name="menu-outline"  class="menu-icon"></ion-icon>
+          <ion-icon name="close-outline" class="close-icon"></ion-icon>
+        </button>
+      </div>
     </div>
   </header>
 
-
   <main>
-    <article class="container">
 
-      <!--  #HERO -->
-      <section class="hero" id="home">
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="hero-section">
+      <!-- Animated aurora blobs -->
+      <div class="hero-blobs" aria-hidden="true">
+        <div class="blob blob--cyan"></div>
+        <div class="blob blob--purple"></div>
+        <div class="blob blob--green"></div>
+      </div>
+      <!-- Grain texture overlay -->
+      <div class="hero-grain" aria-hidden="true"></div>
 
-        <!-- <figure class="hero-banner">
-
-          <picture>
-            <source srcset="./assets/images/hero-orange-bg.png" media="(min-width: 768px)">
-            <source srcset="./assets/images/hero-orange-bg.png" media="(min-width: 500px)">
-            <img src="./assets/images/hero-orange-bg.png" alt="background"
-              class="w-100">
-          </picture>
-
-        </figure> -->
+      <div class="hero-container container">
 
         <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to Opportunities
+          </div>
 
-          <h2 class="h2 hero-title">Tejesvani Muppara Vijayaram</h2>
-          <h3 class="hero-tagline">Data Engineer | Analyst - Making Data Work Smarter</h3>
+          <h1 class="hero-name">Tejesvani<br>Muppara Vijayaram</h1>
+          <p class="hero-subtitle"><span class="hero-role">Data Engineer</span><span class="hero-subtitle-sep">&mdash;</span>Building Reliable Data Pipelines at Scale</p>
 
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-          
-        </div>
+          <div class="hero-tags">
+            <span class="hero-tag">Pipeline Engineering</span>
+            <span class="hero-tag">Streaming &amp; Real-Time</span>
+            <span class="hero-tag">Analytics Engineering</span>
+            <span class="hero-tag">Data Modeling</span>
+            <span class="hero-tag">Cloud Infrastructure</span>
+          </div>
 
-        <ul class="hero-social-list">
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="assets/resume/TejesvaniMupparaVijayaram_Resume.pdf" target="_blank" class="btn btn-secondary">
+              <ion-icon name="document-outline"></ion-icon>
+              Resume
+            </a>
+          </div>
 
-          <li>
-            <a href="https://github.com/Tejesvani" class="hero-social-link">
+          <div class="hero-socials">
+            <a href="https://github.com/Tejesvani" target="_blank" class="social-icon-link" aria-label="GitHub">
               <ion-icon name="logo-github"></ion-icon>
-              <div class="tooltip">GitHub</div>
             </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/in/tejesvani-m-v-782468153/" class="hero-social-link">
+            <a href="https://www.linkedin.com/in/tejesvani-m-v-782468153/" target="_blank" class="social-icon-link" aria-label="LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
-              <div class="tooltip">Linkedin</div>
             </a>
-          </li>
-
-          <li>
-            <a href="https://public.tableau.com/app/profile/tejesvani.m.v/vizzes" class="hero-social-link">
-              <ion-icon name="logo-tableau"></ion-icon>
-              <div class="tooltip">Tableau</div>
-            </a>
-          </li>
-
-        </ul>
-
-        <a href="#stats" class="scroll-down">Scroll</a>
-
-      </section>
-
-
-      <!--  #STATS  -->
-      <section class="stats" id="stats">
-        <ul class="stats-list">
-
-          <li>
-            <a href="#" class="stats-card">
-
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                1.5+ <strong>Years of Experience</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#portfolio" class="stats-card">
-
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                10+ <strong>Completed Projects</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#skills" class="stats-card">
-
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                15+ <strong>Tools and Technologies Explored</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-        </ul>
-      </section>
-
-
-      <!--  #ABOUT  -->
-      <section class="about" id="about">
-
-        <figure class="about-banner">
-            <img src="./assets/images/Teja.jpg" alt="A man in a alice blue shirt with a thinking expression"
-            class="w-100">
-        </figure>
-
-        <div class="about-content section-content">
-
-          <p class="section-subtitle">About me</p>
-
-          <h2 class="h3 section-title">Turning Data into Insights, One Pipeline at a Time!</h2>
-
-          <p class="section-text">
-            Hi! I’m Tejesvani, a Data Analyst & Engineer with a passion for transforming raw data into actionable insights. 
-            I specialize in building scalable data pipelines, optimizing ETL workflows, and crafting interactive dashboards that drive 
-            business decisions. I love solving complex data challenges and exploring new tools, frameworks, and technologies to enhance my 
-            skill set. From designing efficient data models to developing insightful visualizations, I thrive in making data work smarter.
-            Let’s connect and turn data into opportunities!
-          </p>
-
-          <div class="btn-group">
-            <a href="#contact" class="btn btn-secondary">Hire me</a>
-            <a href="/assets/resume/TejesvaniMupparaVijayaram_Resume.pdf" class="btn btn-primary">Download CV</a>
           </div>
-
         </div>
 
-      </section>
-
-
-      <!--  #SKILLS -->
-      <section class="skills" id="skills">
-
-        <div class="skills-content section-content">
-
-          <p class="section-subtitle">My skills</p>
-
-          <h2 class="h3 section-title">What My Data Skills Include?</h2>
-
-          <p class="section-text">
-            I build scalable data pipelines and perform in-depth analytics to transform raw data into actionable insights. From ETL 
-            development to data visualization, I ensure data is optimized for decision-making.
-          </p>
-
-          <div class="skills-toggle" data-toggle-box>
-            <button class="toggle-btn active" data-toggle-btn>Skills</button>
-
-            <button class="toggle-btn" data-toggle-btn>Tools</button>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/Photo.jpg" alt="Tejesvani Muppara Vijayaram" class="hero-image">
           </div>
-
-        </div>
-
-        <div class="skills-box" data-skills-box>
-
-          <ul class="skills-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Python</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills_python.png" alt="Python logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">SQL</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills_sql.png" alt="SQL logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Tableau</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-tableau.png" alt="Tableau logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Power BI</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-powerbi.png" alt="PowerBI logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Numpy</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-numpy.png" alt="Numpy logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Pandas</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-pandas.png" alt="Pandas logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Scikit Learn</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-scikit-learn.png" alt="Scikit Learn logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Data Pipeline</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-data-pipeline.png" alt="Data Pipeline logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">ETL</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-etl.png" alt="ETL logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Excel</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/skills-excel.png" alt="Excel logo">
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-          <ul class="tools-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Git</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-git.png" alt="Git logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Docker</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-docker.png" alt="Docker logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Apache Airflow</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-airflow.png" alt="Apache Airflow logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">AWS</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-aws-1.png" alt="AWS logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Amazon S3</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-amazon-s3.png" alt="Amazon S3 logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Apache Kafka</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-apache-kafka.png" alt="Apache Kafka logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Apache Spark</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-apache-spark.png" alt="Apache Spark logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Google Cloud</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-google-cloud.png" alt="Google Cloud logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Google Big Query</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-google-cloud-bigquery.png" alt="Google Big Query logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">VS Code</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-vs-code.png" alt="VS Code logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Flask</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-flask.png" alt="Flask logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Jira</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/tools-jira.png" alt="Jira logo">
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </section>
-
-
-
-      <!--  #PROJECTS -->
-      <section class="project" id="portfolio">
-
-        <ul class="project-list">
-
-          <li>
-            <div class="project-content section-content">
-
-              <p class="section-subtitle">My Works</p>
-
-              <h2 class="h3 section-title">A Deep Dive into My Work!</h2>
-
-              <p class="section-text">
-                Worked with diverse datasets to uncover insights and solve real-world problems. Whether it's optimizing data flows or 
-                creating impactful visualizations, each project is built to drive meaningful decisions.
-              </p>
-
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Years Experience</span>
             </div>
-          </li>
-
-
-          
-          <li>
-            <a href="https://github.com/Tejesvani/End-to-End-Smart-City-Data-Streaming-Pipeline" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-smart-city.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Smart City Data Streaming
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">Data Engineering</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-          
-
-
-          <li>
-            <a href="https://github.com/Tejesvani/IPL_Auction_Analysis" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-ipl.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  IPL Auction Analysis
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">SQL</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/Tejesvani/Bike-Sharing-Demand" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-blue-bikes.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Bike Sharing Demand Analysis
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">Data Mining</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/Saitej0211/Bank_Marketing_Prediction_MLops" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-bank-marketing.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Bank Marketing Prediction
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">MLOps</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/Tejesvani/RFM_Analysis" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-customer-segmentation-2.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Customer Segmentation
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">Data Analysis</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://public.tableau.com/app/profile/tejesvani.m.v/viz/SalesCustomerDashboards_17357565581330/CustomerDashboard" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-sales-dashboard.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Sales and Customer Dashboard
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">Tableau</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/Tejesvani/RFM_Analysis" class="project-card" target="_blank">
-              <figure class="card-banner">
-                <img src="./assets/images/project-nlp.jpg" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-          
-              <div class="card-content">
-                <h3 class="h4 card-title">
-                  Research Paper Recommender and Classifier
-                </h3>
-                <div class="project-banner-footer">
-                  <p class="project-domain">NLP</p>
-                  <ion-icon name="arrow-forward-outline" class="git-arrow"></ion-icon>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <button class="load-more">Load more work</button>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-      <!--  #CONTACT  -->
-      <section class="contact" id="contact">
-
-        <div class="contact-content section-content">
-
-          <p class="section-subtitle">Contact</p>
-
-          <h2 class="h3 section-title">Want to connect? Drop an Email</h2>
-
+            <div class="hero-stat">
+              <span class="stat-value">1TB</span>
+              <span class="stat-label">Data / Day</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">50M+</span>
+              <span class="stat-label">Records Migrated</span>
+            </div>
+          </div>
         </div>
 
-        <form action="" class="contact-form">
+      </div>
+    </section>
 
-          <ul class="contact-list">
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Turning Raw Data into Reliable Infrastructure</h2>
+        </div>
+        <div class="about-body">
+          <p>I'm a Data Engineer with 3+ years of experience building and optimizing data pipelines, dimensional models, and analytics infrastructure. I specialize in processing large-scale transactional and sensor datasets with a focus on data quality, schema governance, and analytics-ready modeling.</p>
+          <p>Currently at <strong>myRide</strong> in Boston, processing 1TB of sensor and ride data daily on Snowflake and dbt — cutting pipeline execution time by 35% and reducing bad sensor data by 60%. Previously at <strong>LTIMindtree</strong>, where I led the migration of 50M+ insurance records to Azure and built the Medallion architecture that the analytics and finance teams depend on today.</p>
+          <p>I hold an MS in Data Analytics Engineering from <strong>Northeastern University</strong> (GPA 3.95) and bring strong foundations in both distributed systems and statistical modeling to everything I build.</p>
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+            <a href="assets/resume/TejesvaniMupparaVijayaram_Resume.pdf" target="_blank" class="btn btn-secondary">
+              <ion-icon name="download-outline"></ion-icon>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <li class="contact-list-item">
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="experience-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Work Experience</span>
+          <h2 class="section-title">Where I've Built Things That Matter</h2>
+        </div>
 
-              <div class="contact-item-icon">
-                <ion-icon name="location-outline"></ion-icon>
+        <div class="timeline">
+
+          <!-- myRide -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Engineer</h3>
+                  <p class="timeline-company">myRide</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Oct 2025 – Present</span>
+                  <span class="timeline-location">Boston, MA</span>
+                </div>
               </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Address:</h3>
-
-                <address class="contact-info">
-                  Boston, Massachusetts
-                </address>
+              <div class="timeline-stack">
+                <span class="stack-badge">Airflow</span>
+                <span class="stack-badge">dbt</span>
+                <span class="stack-badge">Snowflake</span>
+                <span class="stack-badge">Python</span>
               </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Phone:</h3>
-                <a href="tel:8574659450" class="contact-info">+1(857) 465 9450</a>
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email:</h3>
-                <a href="mailto:mvtejesvani@gmail.com" class="contact-info">mvtejesvani@gmail.com</a>
-                <a href="mailto:mupparavijayaram.t@northeastern.edu" class="contact-info">mupparavijayaram.t@northeastern.edu</a>
-              </div>
-
-            </li>
-
-            <li>
-              <ul class="contac-social-list">
-                <li>
-                  <a href="https://www.linkedin.com/in/tejesvani-m-v-782468153/" class="contact-social-link">
-                    <div class="tooltip">LinkedIn</div>
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://github.com/Tejesvani" class="contact-social-link">
-                    <div class="tooltip">GitHub</div>
-
-                    <ion-icon name="logo-github"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://public.tableau.com/app/profile/tejesvani.m.v/vizzes" class="contact-social-link">
-                    <div class="tooltip">Tableau</div>
-                    <ion-icon name="logo-tableau"></ion-icon>
-                  </a>
-                </li>
-
+              <ul class="timeline-bullets">
+                <li>Cut pipeline execution time by <strong>35%</strong> on 1TB/day sensor and ride data ingestion by refactoring Airflow DAGs to run task groups in parallel, making data available 25% faster for downstream reporting.</li>
+                <li>Improved KPI reliability by <strong>40%</strong> for ops and product teams by building dbt staging and intermediate models that enforced null checks, deduplication, and referential integrity across ride, vehicle, and pricing sources.</li>
+                <li>Reduced bad sensor data by <strong>60%</strong> by building a dbt validation layer on Snowflake, flagging anomalies, out-of-range values, and late-arriving records before reporting.</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-          </ul>
+          <!-- LTIMindtree — Data Engineer -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Engineer</h3>
+                  <p class="timeline-company">LTIMindtree</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Jan 2022 – May 2023</span>
+                  <span class="timeline-location">Chennai, TN</span>
+                </div>
+              </div>
+              <div class="timeline-stack">
+                <span class="stack-badge">Azure ADF</span>
+                <span class="stack-badge">dbt</span>
+                <span class="stack-badge">Synapse</span>
+                <span class="stack-badge">Delta Lake</span>
+                <span class="stack-badge">Terraform</span>
+                <span class="stack-badge">CI/CD</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Migrated <strong>50M+ insurance records</strong> from on-prem Oracle to ADLS Gen2 using Azure Data Factory with Delta format, replacing slow legacy reporting with a lineage-tracked, audit-ready data foundation.</li>
+                <li>Cut pipeline runtime by <strong>60%</strong> by replacing end-of-day full reloads with incremental CDC using ADF change tracking, eliminating the overhead of reloading unchanged records.</li>
+                <li>Raised data quality from <strong>82% to 94%</strong> across the Medallion pipeline by implementing dbt tests at every layer and ADF failure alerts, cutting weekly manual reporting corrections.</li>
+                <li>Built <strong>30+ dbt models</strong> on Synapse across Silver and Gold layers, including SCD Type 2 logic for policy dimension tables to preserve full historical changes.</li>
+                <li>Reduced deployment time by <strong>50%</strong> by provisioning Azure infrastructure with Terraform and automating dbt deployments through Azure DevOps CI/CD.</li>
+              </ul>
+            </div>
+          </div>
 
-        </form>
+          <!-- LTIMindtree — Associate -->
+          <div class="timeline-item">
+            <div class="timeline-marker timeline-marker--muted"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Associate Engineer</h3>
+                  <p class="timeline-company">LTIMindtree</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Aug 2021 – Dec 2021</span>
+                  <span class="timeline-location">Chennai, TN</span>
+                </div>
+              </div>
+              <div class="timeline-stack">
+                <span class="stack-badge">SQL</span>
+                <span class="stack-badge">Azure ADF</span>
+                <span class="stack-badge">Data Modeling</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Designed source-to-target mappings and logical data models for <strong>10+ datasets</strong>, reducing downstream rework by ~25%.</li>
+                <li>Resolved <strong>40+ data availability and consistency issues</strong> by tracing discrepancies across source and target systems using SQL, reducing reporting delays by ~35%.</li>
+              </ul>
+            </div>
+          </div>
 
-      </section>
-      
+        </div>
+      </div>
+    </section>
 
-    </article>
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="skills-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Technical Skills</span>
+          <h2 class="section-title">My Engineering Toolkit</h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="git-branch-outline"></ion-icon>
+              Orchestration &amp; Processing
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Apache Airflow</span>
+              <span class="skill-tag">dbt</span>
+              <span class="skill-tag">PySpark</span>
+              <span class="skill-tag">Apache Kafka</span>
+              <span class="skill-tag">Spark Structured Streaming</span>
+              <span class="skill-tag">Apache Spark</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="cloud-outline"></ion-icon>
+              Cloud Platforms
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--azure">Azure</span>
+              <span class="skill-tag">Synapse Analytics</span>
+              <span class="skill-tag">Azure Data Factory</span>
+              <span class="skill-tag">ADLS Gen2</span>
+              <span class="skill-tag">Azure Databricks</span>
+              <span class="skill-tag skill-tag--gcp">GCP</span>
+              <span class="skill-tag">BigQuery</span>
+              <span class="skill-tag skill-tag--aws">AWS</span>
+              <span class="skill-tag">Amazon S3</span>
+              <span class="skill-tag">Redshift</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="server-outline"></ion-icon>
+              Warehouses &amp; Storage
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Snowflake</span>
+              <span class="skill-tag">Delta Lake</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Oracle</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="code-slash-outline"></ion-icon>
+              Programming &amp; Data
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">R</span>
+              <span class="skill-tag">Scala</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="construct-outline"></ion-icon>
+              DevOps &amp; Infrastructure
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              Monitoring &amp; Visualization
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Prometheus</span>
+              <span class="skill-tag">Grafana</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">DAX</span>
+              <span class="skill-tag">Power Query</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="projects-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Hands-On Project Work</h2>
+          <p class="section-desc">End-to-end data engineering systems — from streaming pipelines and cloud data warehouses to orchestrated ML workflows.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Fraud Detection — Featured -->
+          <div class="project-card project-card--featured">
+            <div class="project-card-top">
+              <div class="project-card-top-content">
+                <span class="project-domain">Real-Time Streaming</span>
+                <h3 class="project-title">Transaction Fraud Detection Platform</h3>
+                <p class="project-desc">Distributed Kafka streaming pipeline with Avro schema governance, fault-tolerant DLQ/offset replay, and idempotent PostgreSQL writes. Python risk-scoring microservices process 30–50 events/min with full audit trails. Scales to 2–3x traffic spikes via Kubernetes HPA with complete observability through Prometheus and Grafana dashboards monitoring consumer lag, throughput, and error rates. Includes a Streamlit UI for manual transaction submission and reconciliation reports.</p>
+                <div class="project-highlights">
+                  <span class="highlight">98% processing reliability, zero data loss across failure scenarios</span>
+                  <span class="highlight">70% faster incident detection via Prometheus + Grafana</span>
+                  <span class="highlight">95% reduction in undetected data inconsistencies</span>
+                </div>
+              </div>
+              <div class="project-metric-block">
+                <span class="metric-value">98%</span>
+                <span class="metric-label">Processing<br>Reliability</span>
+              </div>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-stack">
+                <span class="project-tag">Kafka</span>
+                <span class="project-tag">Avro</span>
+                <span class="project-tag">Schema Registry</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Kubernetes</span>
+                <span class="project-tag">Prometheus</span>
+                <span class="project-tag">Grafana</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+              <a href="https://github.com/Tejesvani/Fraud-Detection-Platform" target="_blank" class="project-link">
+                <ion-icon name="logo-github"></ion-icon>
+                View on GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Smart City -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-domain">IoT Streaming</span>
+              <div class="project-metric-sm">
+                <span class="metric-value-sm">AWS</span>
+                <span class="metric-label-sm">Native Stack</span>
+              </div>
+            </div>
+            <h3 class="project-title">Smart City IoT Data Streaming</h3>
+            <p class="project-desc">End-to-end streaming pipeline for real-time IoT sensor data. Integrates Kafka for message ingestion, Spark Structured Streaming for real-time processing, and S3 as a data lake — with downstream AWS analytics and visualization services.</p>
+            <div class="project-stack">
+              <span class="project-tag">Kafka</span>
+              <span class="project-tag">Spark Streaming</span>
+              <span class="project-tag">AWS S3</span>
+              <span class="project-tag">PySpark</span>
+              <span class="project-tag">AWS</span>
+            </div>
+            <a href="https://github.com/Tejesvani/IoT-Data-Streaming-and-Analytics" target="_blank" class="project-link">
+              <ion-icon name="logo-github"></ion-icon>
+              View on GitHub
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <!-- Project 3: Mass ED Utilization -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-domain">Analytics Engineering</span>
+              <div class="project-metric-sm">
+                <span class="metric-value-sm">dbt</span>
+                <span class="metric-label-sm">Transformations</span>
+              </div>
+            </div>
+            <h3 class="project-title">Massachusetts ED Utilization Pipeline</h3>
+            <p class="project-desc">ELT pipeline extracting Massachusetts Acute Care Hospital quarterly Emergency Department data from CHIA, loading into Snowflake, and transforming with dbt to produce analytics-ready models for ED utilization trend analysis.</p>
+            <div class="project-stack">
+              <span class="project-tag">Snowflake</span>
+              <span class="project-tag">dbt</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">SQL</span>
+            </div>
+            <a href="https://github.com/Tejesvani/CHIA-Mass-EDD" target="_blank" class="project-link">
+              <ion-icon name="logo-github"></ion-icon>
+              View on GitHub
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <!-- Project 4: Bank Marketing -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-domain">MLOps Pipeline</span>
+              <div class="project-metric-sm">
+                <span class="metric-value-sm">70%</span>
+                <span class="metric-label-sm">ETL Runtime Reduction</span>
+              </div>
+            </div>
+            <h3 class="project-title">Bank Marketing ML Pipeline</h3>
+            <p class="project-desc">End-to-end ML pipeline on GCP using Airflow DAGs and Docker containers, automating data ingestion, feature engineering, model training, and evaluation with full lineage tracking in BigQuery. Partitioned and clustered tables cut ETL job runtime by 70%.</p>
+            <div class="project-stack">
+              <span class="project-tag">GCP</span>
+              <span class="project-tag">BigQuery</span>
+              <span class="project-tag">Airflow</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">CI/CD</span>
+            </div>
+            <a href="https://github.com/Tejesvani/Bank_Marketing_Prediction_MLops" target="_blank" class="project-link">
+              <ion-icon name="logo-github"></ion-icon>
+              View on GitHub
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <!-- Project 5: Credit Card -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-domain">Cloud Analytics</span>
+              <div class="project-metric-sm">
+                <span class="metric-value-sm">90%</span>
+                <span class="metric-label-sm">Model Accuracy</span>
+              </div>
+            </div>
+            <h3 class="project-title">Credit Card Purchase Analytics</h3>
+            <p class="project-desc">Analytical transformations for customer credit data on Azure Databricks. Developed a 90% accurate classification model for purchase prediction, integrated with a Power BI dashboard using 10+ features for comprehensive segmentation and visualization.</p>
+            <div class="project-stack">
+              <span class="project-tag">Azure Databricks</span>
+              <span class="project-tag">ADLS</span>
+              <span class="project-tag">Power BI</span>
+              <span class="project-tag">PySpark</span>
+              <span class="project-tag">ML</span>
+            </div>
+            <a href="https://github.com/Tejesvani/Credit-Card-Purchase-Analytics" target="_blank" class="project-link">
+              <ion-icon name="logo-github"></ion-icon>
+              View on GitHub
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education" class="education-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div class="education-grid">
+
+          <div class="education-card">
+            <div class="education-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="education-content">
+              <h3 class="education-degree">Master of Science in Data Analytics Engineering</h3>
+              <p class="education-school">Northeastern University</p>
+              <p class="education-location">Boston, MA</p>
+              <div class="education-meta">
+                <span class="education-date">Sept 2023 – May 2025</span>
+                <span class="education-gpa">GPA 3.95 / 4.0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="education-content">
+              <h3 class="education-degree">Bachelor of Engineering in Computer Science</h3>
+              <p class="education-school">Anna University</p>
+              <p class="education-location">Chennai, TN, India</p>
+              <div class="education-meta">
+                <span class="education-date">Sept 2017 – May 2021</span>
+                <span class="education-gpa">GPA 3.64 / 4.0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-desc">Open to Data Engineer, Analytics Engineer, Data Platform, and related roles. Based in Boston — willing to relocate.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Boston, MA · Willing to Relocate</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <div>
+                <p class="contact-label">Email</p>
+                <a href="mailto:mvtejesvani@gmail.com" class="contact-value contact-link">mvtejesvani@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <div>
+                <p class="contact-label">Phone</p>
+                <a href="tel:+18574659450" class="contact-value contact-link">+1 (857) 465 9450</a>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/Tejesvani" target="_blank" class="social-btn">
+                <ion-icon name="logo-github"></ion-icon>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/tejesvani-m-v-782468153/" target="_blank" class="social-btn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!--
+            To activate the contact form:
+            1. Sign up free at https://formspree.io
+            2. Create a new form and copy your form endpoint
+            3. Replace YOUR_FORM_ID below with your actual ID
+               e.g. action="https://formspree.io/f/abcdefgh"
+          -->
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about the opportunity..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <ion-icon name="send-outline"></ion-icon>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-
-  <!--  #FOOTER   -->
-
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <div class="container">
-
-      <p class="h1 logo">
-        <a href="#">
-          Tejesvani<span>.</span>
+    <div class="footer-container container">
+      <a href="#home" class="logo">Tejesvani<span class="logo-dot">.</span></a>
+      <p class="footer-copy">© 2025 Tejesvani Muppara Vijayaram. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Tejesvani" target="_blank" aria-label="GitHub">
+          <ion-icon name="logo-github"></ion-icon>
         </a>
-      </p>
-
-      <p class="copyright">
-        &copy; 2025 <a href="#">ExploreDataWithTejesvani</a>. All rights reserved
-      </p>
-
+        <a href="https://www.linkedin.com/in/tejesvani-m-v-782468153/" target="_blank" aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <!--  #GO TO TOP  -->
-  <a href="#top" class="go-top" data-go-top title="Go to Top">
-    <ion-icon name="arrow-up"></ion-icon>
-  </a>
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </button>
 
-
-  <!--  custom js link  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--  ionicon link  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </body>
-
 </html>
