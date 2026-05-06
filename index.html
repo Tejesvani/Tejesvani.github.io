@@ -29,10 +29,6 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <ion-icon name="moon-outline"  class="moon-icon"></ion-icon>
-          <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
-        </button>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
           <ion-icon name="menu-outline"  class="menu-icon"></ion-icon>
           <ion-icon name="close-outline" class="close-icon"></ion-icon>
@@ -75,7 +71,7 @@
 
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a href="assets/resume/TejesvaniMupparaVijayaram_Resume.pdf" target="_blank" class="btn btn-secondary">
+            <a href="assets/resume/TejesvaniMupparaVijayaram.pdf" target="_blank" class="btn btn-secondary">
               <ion-icon name="document-outline"></ion-icon>
               Resume
             </a>
@@ -119,15 +115,14 @@
       <div class="container">
         <div class="section-header">
           <span class="section-label">About Me</span>
-          <h2 class="section-title">Turning Raw Data into Reliable Infrastructure</h2>
+          <h2 class="section-title">Raw Data to Reliable Systems</h2>
         </div>
         <div class="about-body">
-          <p>I'm a Data Engineer with 3+ years of experience building and optimizing data pipelines, dimensional models, and analytics infrastructure. I specialize in processing large-scale transactional and sensor datasets with a focus on data quality, schema governance, and analytics-ready modeling.</p>
-          <p>Currently at <strong>myRide</strong> in Boston, processing 1TB of sensor and ride data daily on Snowflake and dbt — cutting pipeline execution time by 35% and reducing bad sensor data by 60%. Previously at <strong>LTIMindtree</strong>, where I led the migration of 50M+ insurance records to Azure and built the Medallion architecture that the analytics and finance teams depend on today.</p>
-          <p>I hold an MS in Data Analytics Engineering from <strong>Northeastern University</strong> (GPA 3.95) and bring strong foundations in both distributed systems and statistical modeling to everything I build.</p>
+          <p>I'm a Data Engineer with about 3 years of experience across the full pipeline lifecycle — ingestion, transformation, data quality, and deployment.</p>
+          <p>I care most about building things that are reliable and maintainable — pipelines that run cleanly, data that teams can actually trust, and infrastructure that holds up under pressure.</p>
           <div class="about-actions">
             <a href="#contact" class="btn btn-primary">Let's Connect</a>
-            <a href="assets/resume/TejesvaniMupparaVijayaram_Resume.pdf" target="_blank" class="btn btn-secondary">
+            <a href="assets/resume/TejesvaniMupparaVijayaram.pdf" target="_blank" class="btn btn-secondary">
               <ion-icon name="download-outline"></ion-icon>
               Download Resume
             </a>
@@ -167,9 +162,9 @@
                 <span class="stack-badge">Python</span>
               </div>
               <ul class="timeline-bullets">
-                <li>Cut pipeline execution time by <strong>35%</strong> on 1TB/day sensor and ride data ingestion by refactoring Airflow DAGs to run task groups in parallel, making data available 25% faster for downstream reporting.</li>
-                <li>Improved KPI reliability by <strong>40%</strong> for ops and product teams by building dbt staging and intermediate models that enforced null checks, deduplication, and referential integrity across ride, vehicle, and pricing sources.</li>
-                <li>Reduced bad sensor data by <strong>60%</strong> by building a dbt validation layer on Snowflake, flagging anomalies, out-of-range values, and late-arriving records before reporting.</li>
+                <li>Cut pipeline execution time by 42% on 1TB/day sensor and ride data ingestion by refactoring Airflow DAGs to process data as micro-batches in parallel, enabling near real-time data availability for downstream ML use cases.</li>
+                <li>Improved performance metric reliability by 32% for engineering teams by building dbt staging and intermediate models that enforced null checks, deduplication, and referential integrity across ride, vehicle, and pricing sources.</li>
+                <li>Reduced bad sensor data by 53% by building a dbt validation layer on Snowflake, flagging anomalies, out-of-range values, and late-arriving records before reporting.</li>
               </ul>
             </div>
           </div>
@@ -190,18 +185,18 @@
               </div>
               <div class="timeline-stack">
                 <span class="stack-badge">Azure ADF</span>
+                <span class="stack-badge">Azure Synapse</span>
+                <span class="stack-badge">ADLS Gen2</span>
                 <span class="stack-badge">dbt</span>
-                <span class="stack-badge">Synapse</span>
                 <span class="stack-badge">Delta Lake</span>
-                <span class="stack-badge">Terraform</span>
                 <span class="stack-badge">CI/CD</span>
               </div>
               <ul class="timeline-bullets">
-                <li>Migrated <strong>50M+ insurance records</strong> from on-prem Oracle to ADLS Gen2 using Azure Data Factory with Delta format, replacing slow legacy reporting with a lineage-tracked, audit-ready data foundation.</li>
-                <li>Cut pipeline runtime by <strong>60%</strong> by replacing end-of-day full reloads with incremental CDC using ADF change tracking, eliminating the overhead of reloading unchanged records.</li>
-                <li>Raised data quality from <strong>82% to 94%</strong> across the Medallion pipeline by implementing dbt tests at every layer and ADF failure alerts, cutting weekly manual reporting corrections.</li>
-                <li>Built <strong>30+ dbt models</strong> on Synapse across Silver and Gold layers, including SCD Type 2 logic for policy dimension tables to preserve full historical changes.</li>
-                <li>Reduced deployment time by <strong>50%</strong> by provisioning Azure infrastructure with Terraform and automating dbt deployments through Azure DevOps CI/CD.</li>
+                <li>Migrated 50M+ insurance records from on-prem Oracle to ADLS Gen2 using Azure Data Factory with Delta format, replacing slow legacy reporting with a lineage-tracked, audit-ready data foundation.</li>
+                <li>Cut pipeline runtime by 57% by replacing end-of-day full reloads with incremental CDC using ADF change tracking, eliminating the processing overhead of reloading unchanged records.</li>
+                <li>Built 30+ dbt models on Synapse across Silver and Gold layers, including SCD Type 2 logic for policy dimension tables to preserve full historical changes.</li>
+                <li>Raised data quality from 82% to 94% across the Medallion pipeline by implementing dbt tests at every layer and ADF failure alerts, cutting weekly manual reporting corrections.</li>
+                <li>Reduced deployment time by 50% by provisioning Azure infrastructure with Terraform and automating dbt deployments through Azure DevOps CI/CD.</li>
               </ul>
             </div>
           </div>
@@ -226,8 +221,8 @@
                 <span class="stack-badge">Data Modeling</span>
               </div>
               <ul class="timeline-bullets">
-                <li>Designed source-to-target mappings and logical data models for <strong>10+ datasets</strong>, reducing downstream rework by ~25%.</li>
-                <li>Resolved <strong>40+ data availability and consistency issues</strong> by tracing discrepancies across source and target systems using SQL, reducing reporting delays by ~35%.</li>
+                <li>Designed source-to-target mappings and logical data models for 10+ datasets, reducing downstream rework by ~25%.</li>
+                <li>Resolved 40+ data availability and consistency issues by tracing discrepancies across source and target systems using SQL, reducing reporting delays by ~35%.</li>
               </ul>
             </div>
           </div>
@@ -352,48 +347,84 @@
           <p class="section-desc">End-to-end data engineering systems — from streaming pipelines and cloud data warehouses to orchestrated ML workflows.</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-tabs">
+          <button class="tab-btn active" data-tab="all">All</button>
+          <button class="tab-btn" data-tab="de">Data Engineering</button>
+          <button class="tab-btn" data-tab="devops">DevOps</button>
+        </div>
 
-          <!-- Project 1: Fraud Detection — Featured -->
-          <div class="project-card project-card--featured">
-            <div class="project-card-top">
-              <div class="project-card-top-content">
-                <span class="project-domain">Real-Time Streaming</span>
-                <h3 class="project-title">Transaction Fraud Detection Platform</h3>
-                <p class="project-desc">Distributed Kafka streaming pipeline with Avro schema governance, fault-tolerant DLQ/offset replay, and idempotent PostgreSQL writes. Python risk-scoring microservices process 30–50 events/min with full audit trails. Scales to 2–3x traffic spikes via Kubernetes HPA with complete observability through Prometheus and Grafana dashboards monitoring consumer lag, throughput, and error rates. Includes a Streamlit UI for manual transaction submission and reconciliation reports.</p>
-                <div class="project-highlights">
-                  <span class="highlight">98% processing reliability, zero data loss across failure scenarios</span>
-                  <span class="highlight">70% faster incident detection via Prometheus + Grafana</span>
-                  <span class="highlight">95% reduction in undetected data inconsistencies</span>
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: Fraud Detection (DE + DevOps) -->
+          <div class="project-card project-card--featured" data-tabs="all de devops" data-order-all="1" data-order-de="1" data-order-devops="1">
+            <div class="project-card-header">
+              <span class="project-domain">Real-Time Streaming</span>
+              <div class="tab-variant tab-variant--metric" data-for="all de">
+                <div class="project-metric-sm">
+                  <span class="metric-value-sm">98%</span>
+                  <span class="metric-label-sm">Processing Reliability</span>
                 </div>
               </div>
-              <div class="project-metric-block">
-                <span class="metric-value">98%</span>
-                <span class="metric-label">Processing<br>Reliability</span>
+              <div class="tab-variant tab-variant--metric" data-for="devops" style="display:none">
+                <div class="project-metric-sm">
+                  <span class="metric-value-sm">70%</span>
+                  <span class="metric-label-sm">Faster Incident Detection</span>
+                </div>
               </div>
             </div>
-            <div class="project-card-bottom">
-              <div class="project-stack">
-                <span class="project-tag">Kafka</span>
-                <span class="project-tag">Avro</span>
-                <span class="project-tag">Schema Registry</span>
-                <span class="project-tag">PostgreSQL</span>
-                <span class="project-tag">Kubernetes</span>
-                <span class="project-tag">Prometheus</span>
-                <span class="project-tag">Grafana</span>
-                <span class="project-tag">Docker</span>
-                <span class="project-tag">Streamlit</span>
+            <h3 class="project-title">Transaction Fraud Detection Platform</h3>
+
+            <!-- DE / All variant -->
+            <div class="tab-variant" data-for="all de">
+              <p class="project-desc">Distributed Kafka streaming pipeline with Avro schema governance, fault-tolerant dead-letter queues, offset replay, and idempotent PostgreSQL writes. Python risk-scoring microservices process 30–50 events/min with full audit trails across Kafka and PostgreSQL.</p>
+              <div class="project-highlights">
+                <span class="highlight">98% processing reliability, zero data loss across failure scenarios</span>
+                <span class="highlight">95% reduction in undetected data inconsistencies via schema governance</span>
               </div>
-              <a href="https://github.com/Tejesvani/Fraud-Detection-Platform" target="_blank" class="project-link">
-                <ion-icon name="logo-github"></ion-icon>
-                View on GitHub
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
+              <div class="card-footer">
+                <div class="project-stack">
+                  <span class="project-tag">Kafka</span>
+                  <span class="project-tag">dbt</span>
+                  <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Avro</span>
+                  <span class="project-tag">Schema Registry</span>
+                </div>
+                <a href="https://github.com/Tejesvani/Fraud-Detection-Platform" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                  View on GitHub
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- DevOps variant -->
+            <div class="tab-variant" data-for="devops" style="display:none">
+              <p class="project-desc">Containerized microservices on Kubernetes with HPA auto-scaling handling 2–3x traffic spikes. Prometheus scrapes consumer lag and error rates; Grafana dashboards surface anomalies and trigger alerts for incident response.</p>
+              <div class="project-highlights">
+                <span class="highlight">2–3x traffic spikes absorbed automatically via Kubernetes HPA</span>
+                <span class="highlight">70% faster incident detection via Prometheus + Grafana</span>
+              </div>
+              <div class="card-footer">
+                <div class="project-stack">
+                  <span class="project-tag">Kafka</span>
+                  <span class="project-tag">Kubernetes</span>
+                  <span class="project-tag">Docker</span>
+                  <span class="project-tag">Prometheus</span>
+                  <span class="project-tag">Grafana</span>
+                  <span class="project-tag">HPA</span>
+                </div>
+                <a href="https://github.com/Tejesvani/Fraud-Detection-Platform" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                  View on GitHub
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Project 2: Smart City -->
-          <div class="project-card">
+          <!-- Project 2: IoT Streaming (DE) -->
+          <div class="project-card" data-tabs="all de" data-order-all="5" data-order-de="4">
             <div class="project-card-header">
               <span class="project-domain">IoT Streaming</span>
               <div class="project-metric-sm">
@@ -401,24 +432,30 @@
                 <span class="metric-label-sm">Native Stack</span>
               </div>
             </div>
-            <h3 class="project-title">Smart City IoT Data Streaming</h3>
-            <p class="project-desc">End-to-end streaming pipeline for real-time IoT sensor data. Integrates Kafka for message ingestion, Spark Structured Streaming for real-time processing, and S3 as a data lake — with downstream AWS analytics and visualization services.</p>
-            <div class="project-stack">
-              <span class="project-tag">Kafka</span>
-              <span class="project-tag">Spark Streaming</span>
-              <span class="project-tag">AWS S3</span>
-              <span class="project-tag">PySpark</span>
-              <span class="project-tag">AWS</span>
+            <h3 class="project-title">IoT Streaming Data Pipeline</h3>
+            <p class="project-desc">End-to-end streaming pipeline for real-time IoT sensor data using Kafka for ingestion, Spark Structured Streaming for processing, and S3 as a data lake with downstream AWS analytics and visualization.</p>
+            <div class="project-highlights">
+              <span class="highlight">Real-time processing of continuous sensor event streams</span>
+              <span class="highlight">End-to-end pipeline from raw ingestion to analytics-ready output</span>
             </div>
-            <a href="https://github.com/Tejesvani/IoT-Data-Streaming-and-Analytics" target="_blank" class="project-link">
-              <ion-icon name="logo-github"></ion-icon>
-              View on GitHub
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+            <div class="card-footer">
+              <div class="project-stack">
+                <span class="project-tag">Kafka</span>
+                <span class="project-tag">Spark Streaming</span>
+                <span class="project-tag">AWS S3</span>
+                <span class="project-tag">PySpark</span>
+                <span class="project-tag">AWS</span>
+              </div>
+              <a href="https://github.com/Tejesvani/IoT-Data-Streaming-and-Analytics" target="_blank" class="project-link">
+                <ion-icon name="logo-github"></ion-icon>
+                View on GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
           </div>
 
-          <!-- Project 3: Mass ED Utilization -->
-          <div class="project-card">
+          <!-- Project 3: Mass ED Utilization (DE) -->
+          <div class="project-card" data-tabs="all de" data-order-all="4" data-order-de="3">
             <div class="project-card-header">
               <span class="project-domain">Analytics Engineering</span>
               <div class="project-metric-sm">
@@ -427,47 +464,92 @@
               </div>
             </div>
             <h3 class="project-title">Massachusetts ED Utilization Pipeline</h3>
-            <p class="project-desc">ELT pipeline extracting Massachusetts Acute Care Hospital quarterly Emergency Department data from CHIA, loading into Snowflake, and transforming with dbt to produce analytics-ready models for ED utilization trend analysis.</p>
-            <div class="project-stack">
-              <span class="project-tag">Snowflake</span>
-              <span class="project-tag">dbt</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">SQL</span>
+            <p class="project-desc">ELT pipeline extracting Massachusetts Acute Care Hospital quarterly ED data from CHIA, loading into Snowflake, and transforming with dbt to produce analytics-ready models for utilization trend analysis.</p>
+            <div class="project-highlights">
+              <span class="highlight">Reduced manual reporting effort across 68 acute care hospitals</span>
+              <span class="highlight">dbt models enforced data quality checks at every transformation layer</span>
             </div>
-            <a href="https://github.com/Tejesvani/CHIA-Mass-EDD" target="_blank" class="project-link">
-              <ion-icon name="logo-github"></ion-icon>
-              View on GitHub
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+            <div class="card-footer">
+              <div class="project-stack">
+                <span class="project-tag">Snowflake</span>
+                <span class="project-tag">dbt</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">SQL</span>
+              </div>
+              <a href="https://github.com/Tejesvani/CHIA-Mass-EDD" target="_blank" class="project-link">
+                <ion-icon name="logo-github"></ion-icon>
+                View on GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
           </div>
 
-          <!-- Project 4: Bank Marketing -->
-          <div class="project-card">
+          <!-- Project 4: Bank Marketing (DE + DevOps) -->
+          <div class="project-card" data-tabs="all de devops" data-order-all="2" data-order-de="2" data-order-devops="3">
             <div class="project-card-header">
               <span class="project-domain">MLOps Pipeline</span>
-              <div class="project-metric-sm">
-                <span class="metric-value-sm">70%</span>
-                <span class="metric-label-sm">ETL Runtime Reduction</span>
+              <div class="tab-variant tab-variant--metric" data-for="all de">
+                <div class="project-metric-sm">
+                  <span class="metric-value-sm">70%</span>
+                  <span class="metric-label-sm">ETL Runtime Reduction</span>
+                </div>
+              </div>
+              <div class="tab-variant tab-variant--metric" data-for="devops" style="display:none">
+                <div class="project-metric-sm">
+                  <span class="metric-value-sm">GCP</span>
+                  <span class="metric-label-sm">Native Stack</span>
+                </div>
               </div>
             </div>
             <h3 class="project-title">Bank Marketing ML Pipeline</h3>
-            <p class="project-desc">End-to-end ML pipeline on GCP using Airflow DAGs and Docker containers, automating data ingestion, feature engineering, model training, and evaluation with full lineage tracking in BigQuery. Partitioned and clustered tables cut ETL job runtime by 70%.</p>
-            <div class="project-stack">
-              <span class="project-tag">GCP</span>
-              <span class="project-tag">BigQuery</span>
-              <span class="project-tag">Airflow</span>
-              <span class="project-tag">Docker</span>
-              <span class="project-tag">CI/CD</span>
+
+            <!-- DE / All variant -->
+            <div class="tab-variant" data-for="all de">
+              <p class="project-desc">End-to-end ML pipeline on GCP using Airflow DAGs automating data ingestion, feature engineering, model training, and evaluation with full lineage tracking in BigQuery.</p>
+              <div class="project-highlights">
+                <span class="highlight">70% reduction in ETL job runtime via partitioned and clustered BigQuery tables</span>
+                <span class="highlight">Full lineage tracking across every pipeline run in BigQuery</span>
+              </div>
+              <div class="card-footer">
+                <div class="project-stack">
+                  <span class="project-tag">Airflow</span>
+                  <span class="project-tag">BigQuery</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">GCP</span>
+                </div>
+                <a href="https://github.com/Tejesvani/Bank_Marketing_Prediction_MLops" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                  View on GitHub
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
             </div>
-            <a href="https://github.com/Tejesvani/Bank_Marketing_Prediction_MLops" target="_blank" class="project-link">
-              <ion-icon name="logo-github"></ion-icon>
-              View on GitHub
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+
+            <!-- DevOps variant -->
+            <div class="tab-variant" data-for="devops" style="display:none">
+              <p class="project-desc">Containerized Airflow workers deployed via Docker Compose with a CI/CD pipeline on GCP that rebuilds and redeploys on every push, with automated testing before promotion to production.</p>
+              <div class="project-highlights">
+                <span class="highlight">Automated rebuild and redeploy on every push via CI/CD</span>
+                <span class="highlight">Full lineage tracking enables auditability across all pipeline runs</span>
+              </div>
+              <div class="card-footer">
+                <div class="project-stack">
+                  <span class="project-tag">Docker</span>
+                  <span class="project-tag">GCP</span>
+                  <span class="project-tag">CI/CD</span>
+                  <span class="project-tag">Airflow</span>
+                </div>
+                <a href="https://github.com/Tejesvani/Bank_Marketing_Prediction_MLops" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                  View on GitHub
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <!-- Project 5: Credit Card -->
-          <div class="project-card">
+          <!-- Project 5: Credit Card (All only) -->
+          <div class="project-card" data-tabs="all" data-order-all="6">
             <div class="project-card-header">
               <span class="project-domain">Cloud Analytics</span>
               <div class="project-metric-sm">
@@ -476,19 +558,58 @@
               </div>
             </div>
             <h3 class="project-title">Credit Card Purchase Analytics</h3>
-            <p class="project-desc">Analytical transformations for customer credit data on Azure Databricks. Developed a 90% accurate classification model for purchase prediction, integrated with a Power BI dashboard using 10+ features for comprehensive segmentation and visualization.</p>
-            <div class="project-stack">
-              <span class="project-tag">Azure Databricks</span>
-              <span class="project-tag">ADLS</span>
-              <span class="project-tag">Power BI</span>
-              <span class="project-tag">PySpark</span>
-              <span class="project-tag">ML</span>
+            <p class="project-desc">Analytical transformations for customer credit card data on Azure Databricks. Built a classification model for purchase prediction integrated with a Power BI dashboard for segmentation and visualization.</p>
+            <div class="project-highlights">
+              <span class="highlight">90% model accuracy on purchase prediction across 10+ features</span>
+              <span class="highlight">Power BI dashboard enabled self-serve segmentation for business teams</span>
             </div>
-            <a href="https://github.com/Tejesvani/Credit-Card-Purchase-Analytics" target="_blank" class="project-link">
-              <ion-icon name="logo-github"></ion-icon>
-              View on GitHub
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+            <div class="card-footer">
+              <div class="project-stack">
+                <span class="project-tag">Azure Databricks</span>
+                <span class="project-tag">ADLS</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">PySpark</span>
+                <span class="project-tag">ML</span>
+              </div>
+              <a href="https://github.com/Tejesvani/Credit-Card-Purchase-Analytics" target="_blank" class="project-link">
+                <ion-icon name="logo-github"></ion-icon>
+                View on GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6: Clinical Trials AWS Pipeline (DevOps) -->
+          <div class="project-card" data-tabs="all devops" data-order-all="3" data-order-devops="2">
+            <div class="project-card-header">
+              <span class="project-domain">Cloud Infrastructure</span>
+              <div class="project-metric-sm">
+                <span class="metric-value-sm">21</span>
+                <span class="metric-label-sm">Unit Tests</span>
+              </div>
+            </div>
+            <h3 class="project-title">Clinical Trials AWS Pipeline</h3>
+            <p class="project-desc">Containerized clinical trials data pipeline on AWS ECS Fargate, provisioned with 35 cloud resources via Terraform IaC. Zero hardcoded credentials — all secrets managed through AWS Secrets Manager with CloudWatch monitoring.</p>
+            <div class="project-highlights">
+              <span class="highlight">35 cloud resources provisioned via a single Terraform command</span>
+              <span class="highlight">21 unit tests run automatically on every push via GitHub Actions CI/CD</span>
+            </div>
+            <div class="card-footer">
+              <div class="project-stack">
+                <span class="project-tag">AWS ECS</span>
+                <span class="project-tag">Fargate</span>
+                <span class="project-tag">Terraform</span>
+                <span class="project-tag">GitHub Actions</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">RDS</span>
+                <span class="project-tag">S3</span>
+              </div>
+              <a href="https://github.com/Tejesvani/Clinical-data-aws-de" target="_blank" class="project-link">
+                <ion-icon name="logo-github"></ion-icon>
+                View on GitHub
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
           </div>
 
         </div>

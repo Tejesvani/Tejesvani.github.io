@@ -37,19 +37,6 @@ navbar.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// ==================== THEME TOGGLE ====================
-const themeToggle = document.getElementById('themeToggle');
-const html        = document.documentElement;
-
-const savedTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
-
 // ==================== ACTIVE NAV ON SCROLL ====================
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -119,24 +106,15 @@ new IntersectionObserver((entries) => {
 })();
 
 // ==================== SCROLL REVEAL ====================
-// Add .reveal class to elements that should animate in
 const revealTargets = [
-  // Section headers
   '.section-header',
-  // About
   '.about-body',
-  // Timeline items
   '.timeline-item',
-  // Skill categories (grouped)
   '.skills-grid',
-  // Project cards
   '.project-card',
-  // Education cards
   '.education-card',
-  // Contact blocks
   '.contact-info',
   '.contact-form',
-  // Hero content (partial)
   '.hero-badge',
   '.hero-stats',
 ];
@@ -144,7 +122,6 @@ const revealTargets = [
 revealTargets.forEach(selector => {
   document.querySelectorAll(selector).forEach((el, i) => {
     el.classList.add('reveal');
-    // Stagger sibling elements
     if (selector === '.timeline-item' || selector === '.project-card' || selector === '.education-card') {
       el.style.transitionDelay = `${i * 0.1}s`;
     }
@@ -162,7 +139,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target); // fire once
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
@@ -192,3 +169,38 @@ const headerObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -40px 0px', threshold: 0.3 });
 
 document.querySelectorAll('.section-header').forEach(el => headerObserver.observe(el));
+
+// ==================== PROJECT TABS ====================
+(function initProjectTabs() {
+  const tabBtns     = document.querySelectorAll('.tab-btn');
+  const projectCards = document.querySelectorAll('#projectsGrid [data-tabs]');
+
+  function switchTab(tab) {
+    tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+
+    projectCards.forEach(card => {
+      const cardTabs = card.dataset.tabs.split(' ');
+      const show = tab === 'all' || cardTabs.includes(tab);
+      card.style.display = show ? '' : 'none';
+      if (show) {
+        requestAnimationFrame(() => card.classList.add('visible'));
+      }
+      // Apply per-tab visual order via CSS order property
+      const orderKey = 'order' + tab.charAt(0).toUpperCase() + tab.slice(1);
+      const orderVal = card.dataset[orderKey];
+      card.style.order = orderVal !== undefined ? orderVal : '';
+    });
+
+    document.querySelectorAll('#projectsGrid .tab-variant').forEach(variant => {
+      const forTabs = variant.dataset.for.split(' ');
+      variant.style.display = forTabs.includes(tab) ? '' : 'none';
+    });
+  }
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  // Initialize order for the default active tab
+  switchTab('all');
+})();
