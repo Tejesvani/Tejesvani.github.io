@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tejesvani — Data Engineer</title>
-  <meta name="description" content="Data Engineer with 3+ years building optimizing pipelines, dimensional models, and analytics infrastructure. Core stack: dbt, Kafka, Spark, Azure, Snowflake.">
+  <meta name="description" content="Data Engineer with 3+ years building scalable ETL/ELT pipelines, real-time streaming systems, and cloud analytics infrastructure. Core stack: SQL, Python, dbt, Airflow, Docker, REST API.">
   <link rel="shortcut icon" href="assets/images/title-avatar.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -163,7 +163,7 @@
               </div>
               <ul class="timeline-bullets">
                 <li>Cut pipeline execution time by 42% on 1TB/day sensor and ride data ingestion by refactoring Airflow DAGs to process data as micro-batches in parallel, enabling near real-time data availability for downstream ML use cases.</li>
-                <li>Improved performance metric reliability by 32% for engineering teams by building dbt staging and intermediate models that enforced null checks, deduplication, and referential integrity across ride, vehicle, and pricing sources.</li>
+                <li>Improved performance metric reliability by 32% for engineering teams by building new dbt staging and intermediate models that enforced null checks, deduplication, and referential integrity across ride, vehicle, and pricing sources.</li>
                 <li>Reduced bad sensor data by 53% by building a dbt validation layer on Snowflake, flagging anomalies, out-of-range values, and late-arriving records before reporting.</li>
               </ul>
             </div>
@@ -184,19 +184,17 @@
                 </div>
               </div>
               <div class="timeline-stack">
-                <span class="stack-badge">Azure ADF</span>
-                <span class="stack-badge">Azure Synapse</span>
-                <span class="stack-badge">ADLS Gen2</span>
-                <span class="stack-badge">dbt</span>
-                <span class="stack-badge">Delta Lake</span>
-                <span class="stack-badge">CI/CD</span>
+                <span class="stack-badge">AWS Glue</span>
+                <span class="stack-badge">AWS DMS</span>
+                <span class="stack-badge">Airflow</span>
+                <span class="stack-badge">Snowflake</span>
+                <span class="stack-badge">SQL</span>
               </div>
               <ul class="timeline-bullets">
-                <li>Migrated 50M+ insurance records from on-prem Oracle to ADLS Gen2 using Azure Data Factory with Delta format, replacing slow legacy reporting with a lineage-tracked, audit-ready data foundation.</li>
-                <li>Cut pipeline runtime by 57% by replacing end-of-day full reloads with incremental CDC using ADF change tracking, eliminating the processing overhead of reloading unchanged records.</li>
-                <li>Built 30+ dbt models on Synapse across Silver and Gold layers, including SCD Type 2 logic for policy dimension tables to preserve full historical changes.</li>
-                <li>Raised data quality from 82% to 94% across the Medallion pipeline by implementing dbt tests at every layer and ADF failure alerts, cutting weekly manual reporting corrections.</li>
-                <li>Reduced deployment time by 50% by provisioning Azure infrastructure with Terraform and automating dbt deployments through Azure DevOps CI/CD.</li>
+                <li>Built scalable ETL pipelines that ingested data from 6+ source systems spanning policy, claims, and underwriting domains into Snowflake using AWS Glue and Airflow, establishing analytics-ready data for reporting teams.</li>
+                <li>Reduced end-to-end pipeline runtime by 57% by implementing incremental CDC ingestion pipelines using AWS DMS and Glue jobs, eliminating unnecessary full reloads and improving data freshness for downstream consumers.</li>
+                <li>Optimized Snowflake query runtime by 64% across reporting workloads by redesigning staging transformations with partition-aware SQL models and standardized dimensional structures, improving dashboard responsiveness.</li>
+                <li>Increased enterprise data quality from 82% to 94% by implementing automated SQL validation checks, schema consistency testing, and monitoring workflows across critical ETL pipelines.</li>
               </ul>
             </div>
           </div>
@@ -217,12 +215,13 @@
               </div>
               <div class="timeline-stack">
                 <span class="stack-badge">SQL</span>
-                <span class="stack-badge">Azure ADF</span>
+                <span class="stack-badge">AWS S3</span>
+                <span class="stack-badge">Redshift</span>
                 <span class="stack-badge">Data Modeling</span>
               </div>
               <ul class="timeline-bullets">
-                <li>Designed source-to-target mappings and logical data models for 10+ datasets, reducing downstream rework by ~25%.</li>
-                <li>Resolved 40+ data availability and consistency issues by tracing discrepancies across source and target systems using SQL, reducing reporting delays by ~35%.</li>
+                <li>Streamlined transformation workflows for 10+ insurance datasets by defining relational mappings, SQL transformation rules, and validation logic across ETL pipelines, reducing reporting inconsistencies by 25%.</li>
+                <li>Resolved 40+ production data issues through root cause analysis, reconciliation checks, and cross-system SQL validation across S3, Redshift, and reporting layers, reducing reporting delays by approximately 35%.</li>
               </ul>
             </div>
           </div>
@@ -261,16 +260,18 @@
               Cloud Platforms
             </h3>
             <div class="skill-tags">
+              <span class="skill-tag skill-tag--aws">AWS</span>
+              <span class="skill-tag">Redshift</span>
+              <span class="skill-tag">RDS</span>
+              <span class="skill-tag">Glue</span>
+              <span class="skill-tag">Amazon S3</span>
+              <span class="skill-tag">KMS</span>
               <span class="skill-tag skill-tag--azure">Azure</span>
               <span class="skill-tag">Synapse Analytics</span>
               <span class="skill-tag">Azure Data Factory</span>
               <span class="skill-tag">ADLS Gen2</span>
-              <span class="skill-tag">Azure Databricks</span>
               <span class="skill-tag skill-tag--gcp">GCP</span>
               <span class="skill-tag">BigQuery</span>
-              <span class="skill-tag skill-tag--aws">AWS</span>
-              <span class="skill-tag">Amazon S3</span>
-              <span class="skill-tag">Redshift</span>
             </div>
           </div>
 
@@ -281,7 +282,6 @@
             </h3>
             <div class="skill-tags">
               <span class="skill-tag">Snowflake</span>
-              <span class="skill-tag">Delta Lake</span>
               <span class="skill-tag">PostgreSQL</span>
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">Oracle</span>
